@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divine Jewels</title>
+    <script type="module" crossorigin src="/assets/index-Cjqjttqu.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CiK_kGpt.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="error-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; color: red; z-index: 9999; display: none; padding: 20px; overflow: auto;"></div>
+    <script>
+      window.addEventListener('error', function(event) {
+        const overlay = document.getElementById('error-overlay');
+        overlay.style.display = 'block';
+        overlay.innerHTML += '<h3>Global Error:</h3><pre>' + event.message + '\n' + event.filename + ':' + event.lineno + '</pre>';
+      });
+      window.addEventListener('unhandledrejection', function(event) {
+        const overlay = document.getElementById('error-overlay');
+        overlay.style.display = 'block';
+        overlay.innerHTML += '<h3>Unhandled Rejection:</h3><pre>' + event.reason + '</pre>';
+      });
+    </script>
+  </body>
+</html>
